@@ -9,6 +9,8 @@ package programaderadio;
  *
  * @author maria
  */
+
+
 public class ProgramaDeRadio {
 
     /**
@@ -16,6 +18,8 @@ public class ProgramaDeRadio {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Radio r = new myRadio();
+        
     }
     
 }
