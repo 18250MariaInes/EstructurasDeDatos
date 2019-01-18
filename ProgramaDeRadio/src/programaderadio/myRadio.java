@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramaDeRadio;
+package programaderadio;
 
 /**
  *
@@ -18,7 +18,7 @@ public class myRadio implements Radio{
     private ArrayList<Double> buttons;
     
     public myRadio(){
-        encendido = false;
+        encendido = false; //False es FM y True es para AM
         frecuencia = false;
         estacion = 87.9;
         buttons = new ArrayList<>(12);
@@ -26,7 +26,7 @@ public class myRadio implements Radio{
     
     @Override
     public void toggle(){
-        if (encendido=false){
+        if (encendido==false){
             this.encendido=true;
         }else{
             this.encendido=false;
@@ -41,7 +41,7 @@ public class myRadio implements Radio{
     
     @Override
     public void changeFrequency(){ 
-        if (frecuencia=false){
+        if (frecuencia==false){
             this.frecuencia=true;
             this.estacion=530.0;
         }else{
@@ -52,11 +52,17 @@ public class myRadio implements Radio{
     }
     @Override
     public void changeStation(boolean up){
-        if (this.frecuencia=false){
+        if (this.frecuencia==false){
             this.estacion+=0.2;
             if (estacion>107.9){
-                this.estacion=estacion-87.9;
+                this.estacion= 87.9;
             }   
+        } else {
+            this.estacion+=10.0;
+            if (estacion>1610.0){
+                this.estacion= 530.0;
+            }  
+            
         }
         //Aumenta o disminuye la estacion. Si sube de estacion es true y si baja es false
     }
@@ -74,9 +80,7 @@ public class myRadio implements Radio{
     }
     @Override   
     public void changeStationButton(int numButton){
-        if (numButton <= 11){
-            this.estacion = this.buttons.get(numButton - 1);
-        }
+        this.estacion = this.buttons.get(numButton - 1);
         //Permite seleccionar una estacion (emisora) de las guardadas en las 12 favoritas
     }
     @Override
