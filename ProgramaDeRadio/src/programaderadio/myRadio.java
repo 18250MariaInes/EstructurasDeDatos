@@ -87,16 +87,22 @@ public class myRadio implements Radio{
     }
     @Override
     public void saveStation(int numButton){
-        
+        if (buttons.size() <= 12){
+            this.buttons.add(numButton-1, estacion);
+        }
+        //Guarda la estacion elegida en la lista de estaciones favoritas en el boton seleccionado
     }
-    @Override
+    @Override   
     public void changeStationButton(int numButton){
-        
+        if (numButton <= 11){
+            this.estacion = this.buttons.get(numButton - 1);
+        }
+        //Permite seleccionar una estacion (emisora) de las guardadas en las 12 favoritas
     }
     @Override
     public double getStation(){
-        return estacion;
-        
+        return this.estacion; 
+        //Devuelve la estacion (emisora) actual 
     }
     
 }
