@@ -9,15 +9,20 @@ package ProgramaDeRadio;
  *
  * @author Camila
  */
-
 import java.util.ArrayList;
-public class myRadio implements Radio{
-    private boolean encendido=false;
-    private boolean frecuencia=false;
-    private double estacion;
-    private ArrayList<Double> buttons = new ArrayList<>();
 
+public class myRadio implements Radio{
+    private boolean encendido;
+    private boolean frecuencia;
+    private double estacion;
+    private ArrayList<Double> buttons;
     
+    public myRadio(){
+        encendido = false;
+        frecuencia = false;
+        estacion = 87.9;
+        buttons = new ArrayList<>(12);
+    }
     
     @Override
     public void toggle(){
