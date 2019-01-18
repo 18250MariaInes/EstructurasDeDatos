@@ -20,7 +20,7 @@ public class myRadio implements Radio{
     private boolean encendido;
     private boolean frecuencia;
     private double estacion;
-    private ArrayList<Double> buttons;
+    private double[] buttons;
     
     /**
      *
@@ -29,7 +29,7 @@ public class myRadio implements Radio{
         encendido = false; //False es FM y True es para AM
         frecuencia = false;
         estacion = 87.9;
-        buttons = new ArrayList<>(12);
+        buttons = new double[12];
     }
     
     /**
@@ -106,9 +106,7 @@ public class myRadio implements Radio{
      */
     @Override
     public void saveStation(int numButton){
-        if (buttons.size() <= 12){
-            this.buttons.add(numButton-1, estacion);
-        }
+        this.buttons[numButton-1] = this.estacion;
         //Guarda la estacion elegida en la lista de estaciones favoritas en el boton seleccionado
     }
 
@@ -118,7 +116,7 @@ public class myRadio implements Radio{
      */
     @Override   
     public void changeStationButton(int numButton){
-        this.estacion = this.buttons.get(numButton - 1);
+        this.estacion = this.buttons[numButton - 1];
         //Permite seleccionar una estacion (emisora) de las guardadas en las 12 favoritas
     }
 
