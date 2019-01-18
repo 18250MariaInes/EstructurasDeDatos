@@ -27,11 +27,13 @@ public class myRadio implements Radio{
             this.encendido=false;
         }
     }//Apaga o enciende la radio
+    
     @Override
     public boolean getState(){
         return encendido;
         //Devuelve si el radio esta on u off
     }
+    
     @Override
     public void changeFrequency(){ 
         if (frecuencia=false){
@@ -49,28 +51,33 @@ public class myRadio implements Radio{
             this.estacion+=0.2;
             if (estacion>107.9){
                 this.estacion=estacion-87.9;
-            }
-                    
+            }   
         }
         //Aumenta o disminuye la estacion. Si sube de estacion es true y si baja es false
     }
     @Override
     public boolean getFrequency(){
         return this.frecuencia;
-        
+        //Devuelve la frecuencia actual (AM o FM)
     }
     @Override
     public void saveStation(int numButton){
-        
+        if (buttons.size() <= 12){
+            this.buttons.add(numButton-1, estacion);
+        }
+        //Guarda la estacion elegida en la lista de estaciones favoritas en el boton seleccionado
     }
-    @Override
+    @Override   
     public void changeStationButton(int numButton){
-        
+        if (numButton <= 11){
+            this.estacion = this.buttons.get(numButton - 1);
+        }
+        //Permite seleccionar una estacion (emisora) de las guardadas en las 12 favoritas
     }
     @Override
     public double getStation(){
-        return 0;
-        
+        return this.estacion; 
+        //Devuelve la estacion (emisora) actual 
     }
     
 }
