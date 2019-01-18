@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,49 +8,58 @@ package programaderadio;
 
 /**
  *
- * @author Camila
+ * @author Camila & Maria Ines
  */
-
 import java.util.ArrayList;
 
 /**
- *Clase MyRadio donde se se implementa interface Radio
+ *
  * @author maria
  */
 public class myRadio implements Radio{
-    private boolean encendido=false;
-    private boolean frecuencia=false;
-    private double estacion=87.9;
-    private ArrayList<Double> buttons = new ArrayList<>();
-
+    private boolean encendido;
+    private boolean frecuencia;
+    private double estacion;
+    private ArrayList<Double> buttons;
+    
     /**
-     *Método que enciende y apaga la radio
+     *
+     */
+    public myRadio(){
+        encendido = false; //False es FM y True es para AM
+        frecuencia = false;
+        estacion = 87.9;
+        buttons = new ArrayList<>(12);
+    }
+    
+    /**
+     *
      */
     @Override
     public void toggle(){
-        if (encendido=false){
+        if (encendido==false){
             this.encendido=true;
         }else{
             this.encendido=false;
         }
     }//Apaga o enciende la radio
-
+    
     /**
-     *método que da el estado de la radio entre encendido y apagado
-     * @return boolean, true para encendido y false para apagado
+     *
+     * @return boolean true=encendido false=apagado
      */
     @Override
     public boolean getState(){
         return encendido;
         //Devuelve si el radio esta on u off
     }
-
+    
     /**
-     *método que cambia frecuencia de radio entre am=true y fm =false, tambien cambia la estación de acuerdo a su frecuencia
+     *metodo que cambia frecuencia de radio e igualmente cambia la estacion actual de acuerdo a la frecuencia
      */
     @Override
     public void changeFrequency(){ 
-        if (frecuencia=false){
+        if (frecuencia==false){
             this.frecuencia=true;
             this.estacion=530.0;
         }else{
@@ -60,31 +70,40 @@ public class myRadio implements Radio{
     }
 
     /**
-     *Método que cambia estación de radio dependiendo en su frecuencia
-     * @param up
+     *metodo que cambia la estacion de acuerdo a la frecuencia. Puede subir o bajar de estacion
+     * @param up indica si quiere subir o bajar
      */
     @Override
     public void changeStation(boolean up){
-        if (this.frecuencia=false){
+        if (this.frecuencia==false){
             this.estacion+=0.2;
             if (estacion>107.9){
-                this.estacion=estacion-87.9;
-            }    
-        }else{
-            this.estacion+=10;
+                this.estacion= 87.9;
+            }   
+        } else {
+            this.estacion+=10.0;
+            if (estacion>1610.0){
+                this.estacion= 530.0;
+            }  
+            
         }
         //Aumenta o disminuye la estacion. Si sube de estacion es true y si baja es false
     }
 
     /**
-     *
-     * @return
+     *metodo que retorna frecuencia de la radio
+     * @return boolean de true y false dependiendo de la frecuencia
      */
     @Override
     public boolean getFrequency(){
         return this.frecuencia;
-        
+        //Devuelve la frecuencia actual (AM o FM)
     }
+
+    /**
+     *metodo que guarda la estacion que indique el usuario
+     * @param numButton indica que boton desea
+     */
     @Override
     public void saveStation(int numButton){
         if (buttons.size() <= 12){
@@ -92,13 +111,21 @@ public class myRadio implements Radio{
         }
         //Guarda la estacion elegida en la lista de estaciones favoritas en el boton seleccionado
     }
+
+    /**
+     *metodo que cambia la estacion de los botones
+     * @param numButton indica que boton desea cambiar a
+     */
     @Override   
     public void changeStationButton(int numButton){
-        if (numButton <= 11){
-            this.estacion = this.buttons.get(numButton - 1);
-        }
+        this.estacion = this.buttons.get(numButton - 1);
         //Permite seleccionar una estacion (emisora) de las guardadas en las 12 favoritas
     }
+
+    /**
+     *metodo que retorna estacion actual
+     * @return double con la estacion
+     */
     @Override
     public double getStation(){
         return this.estacion; 
@@ -106,3 +133,4 @@ public class myRadio implements Radio{
     }
     
 }
+

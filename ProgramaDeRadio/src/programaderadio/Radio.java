@@ -1,13 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * 
+ * Interfaz de radio
  */
 package programaderadio;
 
 /**
  *
- * @author Camila
+ * @author Camila & Maria Ines
  */
 public interface Radio {
     public void toggle(); //Apaga o enciende la radio
