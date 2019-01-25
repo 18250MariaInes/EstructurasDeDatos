@@ -3,7 +3,7 @@
  * 
  * Interfaz de radio
  */
-package programaderadio;
+//package programaderadio;
 
 /**
  *

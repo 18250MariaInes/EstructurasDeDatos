@@ -4,7 +4,7 @@
  * 
  * Esta es la clase principal en la cual se ejecutan las instancias de radios
  */
-package programaderadio;
+//package programaderadio;
 
 /**
  *
