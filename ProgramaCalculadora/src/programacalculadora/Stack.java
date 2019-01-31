@@ -1,3 +1,5 @@
+
+package programacalculadora;
 public interface Stack<E> 
 {
 
