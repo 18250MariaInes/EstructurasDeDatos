@@ -9,63 +9,55 @@ import java.util.Vector;
 
 /**
  *
- * @author Camila
+ * clase Pila que implementa Stack encargada de almacenar los valores de documento .txt y manejar su flujo
+ * @param <E>
  */
 public class Pila<E>  implements Stack<E>  {
     Vector<E> v = new Vector();
-    Calculator calcu = new MyCalculator();
     
-    //Verifica que el elemento sea un numero
-   public boolean verificarNum(E item){
-        boolean resultado;
-
-        try {
-            Integer.parseInt((String) item);
-            resultado = true;
-        } catch (NumberFormatException excepcion) {
-            resultado = false;
-        }
-
-        return resultado;
-       
-   }
-   
-   @Override
+    /**
+     *metodo que agrega numero al vector
+     * @param item es el numero a agregar
+     */
+    @Override
    public void push(E item){
-       boolean resultado = verificarNum(item);
-       if (resultado == true){
-           //Si es numero agrega el dato al vecto
-           this.v.add(item);
-       } else {
-           //Si es String se sacan los primeros dos y se operan
-           int num1 =(int) pop();
-           int num2=(int)pop();
-           String itemS= (String)item;
-           int resul=calcu.calculate(num1, num2, itemS);
-           this.v.add(resul);
-       }
+        this.v.add(item);
    }
 
-  
+    /**
+     *metodo que saca el ultimo elemento agregado del vector
+     * @return el numero de la pila que se elimino
+     */
     @Override
    public E pop(){
        // pre: stack is not empty
         // post: most recently pushed item is removed and returned
-        
-       E element=(E) v.get(0);
-       E elemento = (E) v.remove(0);
+       int size=v.size();
+       int ultimo=size-1;
+       E element=(E) v.get(ultimo);
+       v.remove(ultimo);
        return element;
    }
    
-   @Override
+    /**
+     *metodo que muestra el ultimo o siguiente a ser popped de la lista
+     * @return el numero pronto a ser popped
+     */
+    @Override
    public E peek(){
-       E element = (E)v.get(0);
+       int size=v.size();
+       int ultimo=size-1;
+       E element = v.get(ultimo);
        return element;
    }
    // pre: stack is not empty
    // post: top value (next to be popped) is returned
    
-   @Override
+    /**
+     *metodo que chequea si el vector está vacio
+     * @return retorna true or false dependiendo del estado
+     */
+    @Override
    public boolean empty(){
     if (v.size()==0){
         return true;
@@ -75,13 +67,14 @@ public class Pila<E>  implements Stack<E>  {
 }
    // post: returns true if and only if the stack is empty
    
-   @Override
+    /**
+     *metodo que muestra el tamano de nuesto vector
+     * @return su tamaño
+     */
+    @Override
    public int size(){
        return v.size();
    }
    // post: returns the number of elements in the stack
-    
-    
-    
     
 }
