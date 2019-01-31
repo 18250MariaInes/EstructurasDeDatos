@@ -11,6 +11,14 @@ package programacalculadora;
  * @author maria
  */
 public class MyCalculator implements Calculator {
+
+    /**
+     *
+     * @param num1 primer operando
+     * @param num2 segundo operando
+     * @param op operacion a realizar
+     * @return resultado de operacion
+     */
     @Override
     public int calculate (int num1, int num2, String op){
         int dato1 = num1;

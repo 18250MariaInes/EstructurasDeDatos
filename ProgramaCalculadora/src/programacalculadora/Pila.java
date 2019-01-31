@@ -12,7 +12,7 @@ import java.util.Vector;
  * @author Camila
  */
 public class Pila<E>  implements Stack<E>  {
-    Vector v = new Vector();
+    Vector<E> v = new Vector();
     Calculator calcu = new MyCalculator();
     
     //Verifica que el elemento sea un numero
