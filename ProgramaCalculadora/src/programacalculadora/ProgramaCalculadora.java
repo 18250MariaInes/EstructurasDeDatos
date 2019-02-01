@@ -61,14 +61,21 @@ public class ProgramaCalculadora {
                 pila.push(a);  //Se agrega a la pila
             }
                catch (NumberFormatException e){
-                   System.out.println("ERROR");
+                   //Si el item es de tipo String se sacan dos elementos de la pila
+                   int dato1 = pila.pop();
+                   int dato2 = pila.pop();
+                   //Se operan los elementos con el signos usando la calculadora
+                   int nuevo = calculadora.calculate(dato1, dato2, item);
+                   //Se agrega el resultado a la pila
+                   pila.push(nuevo);
+                   
             }
             
         }
-        System.out.println(pila.size());
+        //Se imprime el resultado final
+        System.out.println(pila.peek());
         
         
         
-    }
-    
+    }   
 }
