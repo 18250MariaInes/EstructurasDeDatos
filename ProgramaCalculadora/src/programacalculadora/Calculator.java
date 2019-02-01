@@ -1,3 +1,7 @@
+/**
+ * Interfaz que implementa MyCalculator
+ * NOTA **VER MYCALCULATOR.JAVA
+ */
 package programacalculadora;
 /*
  * To change this license header, choose License Headers in Project Properties.

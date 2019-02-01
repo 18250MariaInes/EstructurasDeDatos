@@ -7,13 +7,13 @@ package programacalculadora;
  */
 
 /**
- *
+ *clase que implementa Calculator de operar todo postfix
  * @author maria
  */
 public class MyCalculator implements Calculator {
 
     /**
-     *
+     *metodo que calcula con los operandos y operador destinados
      * @param num1 primer operando
      * @param num2 segundo operando
      * @param op operacion a realizar

@@ -1,4 +1,8 @@
 
+/**
+ * Interfaz que implementa Pila para su funcionamiento 
+ * **NOTA VER CLASE PILA.JAVA
+ */
 package programacalculadora;
 public interface Stack<E> 
 {
