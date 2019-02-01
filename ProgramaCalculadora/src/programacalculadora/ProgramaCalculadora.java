@@ -5,17 +5,56 @@
  */
 package programacalculadora;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
 /**
  *
- * @author maria
+ * @author maria y camila
  */
 public class ProgramaCalculadora {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Se instancia el arreglo en el cual se guardaran los datos del txt
+        ArrayList<String> lectura = new ArrayList<String>();
+        //Se instancia un objeto de clase pila y otro de tipo calculadora
+        Pila<Integer> pila = new Pila<Integer>();
+        MyCalculator calculadora = new MyCalculator();
+        
+        //Se lee el documento txt
+        try{
+            Stream<String> lines = Files.lines(
+                    Paths.get("datos.txt"),
+                    StandardCharsets.UTF_8
+            );
+            lines.forEach(a -> lectura.add(a));
+        } catch (IOException e){
+            System.out.println("Error!");
+        }
+        System.out.println(lectura);
+        
+        //Se evalua cada objeto de array y si es int se agrega a la pila
+        for (int i = 0; i < ((lectura.size())-1); i++){
+            String item = lectura.get(i);
+            int a;
+            try {
+
+                a=Integer.parseInt(item); //use your variable or object in place of obj
+
+                System.out.println(a + " is a integer number.");
+                pila.push(a);
+
+            }
+               catch (NumberFormatException e){
+            }
+            
+        }
+        System.out.println(pila.size());
+        
+        
         
     }
     
