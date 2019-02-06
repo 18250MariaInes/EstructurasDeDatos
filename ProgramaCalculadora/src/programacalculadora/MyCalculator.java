@@ -8,7 +8,7 @@ package programacalculadora;
 
 /**
  *
- * @author maria
+ * @author maria y camila
  */
 public class MyCalculator implements Calculator {
 

@@ -7,7 +7,7 @@ package programacalculadora;
 
 /**
  *
- * @author maria
+ * @author maria y camila
  */
 public interface Calculator {
     public int calculate (int num1, int num2, String op);
