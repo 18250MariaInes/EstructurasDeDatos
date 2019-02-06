@@ -1,4 +1,4 @@
-package programacalculadora;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -7,13 +7,18 @@ package programacalculadora;
  */
 
 /**
+<<<<<<< HEAD
  *
  * @author maria y camila
+=======
+ *clase que implementa Calculator de operar todo postfix
+ * @author maria
+>>>>>>> db6b2c04a9322e35152ba2b6abe087656c6b449a
  */
 public class MyCalculator implements Calculator {
 
     /**
-     *
+     *metodo que calcula con los operandos y operador destinados
      * @param num1 primer operando
      * @param num2 segundo operando
      * @param op operacion a realizar
