@@ -86,15 +86,66 @@ public class ProgramaDeOrdenar {
             }
         }    //Se termina de agregar cada item del txt al array Listado
         
+                //Se imprime el listado de numeros leidos
+        String prueba = "Arreglo leido:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba = prueba + listado[c] + ", ";
+        }
+        System.out.println(prueba + "\n");
+        
+        /*
+        * Ordenamiento con GNOMESORT
+        */
         //Se instancia el sort Gnome para ejecutarlo con el Listado de ints
         GnomeSort gs = new GnomeSort();
         int[] listGS = GnomeSort.gnomeSort(listado);
-        //Se imprime el primero del listado
-        System.out.println(listado[0]);
-        System.out.println(listado[1]);
-        //Se imprime el primero del ordenado
-        System.out.println(listGS[0]);
-        System.out.println(listGS[1]);
+        //Se imprime el arreglo ya ordenado con GnomeSort
+        String prueba1 = "Arreglo ordenado con GnomeSort:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba1 = prueba1 + listGS[c] + ", ";
+        }
+        System.out.println(prueba1+ "\n");
+        
+        /*
+        * Ordenamiento con MERGESORT
+        */
+        //Se instancia el sort Merge para ejecutarlo con el Listado de ints
+        MergeSort ms = new MergeSort();
+        int[] listMS = ms.mergeSort(listado);
+        //Se imprime el arreglo ya ordenado con MergeSort
+        String prueba2 = "Arreglo ordenado con MergeSort:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba2 = prueba2 + listMS[c] + ", ";
+        }
+        System.out.println(prueba2 + "\n");
+        
+        /*
+        * Ordenamiento con QUICKSORT
+        */
+        //Se instancia el sort Quick para ejecutarlo con el Listado de ints
+        QuickSort qs = new QuickSort();
+        int[] listQS = qs.sort(listado);
+        //Se imprime el arreglo ya ordenado con MergeSort
+        String prueba3 = "Arreglo ordenado con QuickSort:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba3 = prueba3 + listQS[c] + ", ";
+        }
+        System.out.println(prueba3 + "\n");
+        
+        /*
+        * Ordenamiento con RADIXSORT
+        */
+        //Se instancia el sort Radix para ejecutarlo con el Listado de ints
+        RadixSort rs = new RadixSort();
+        int[] listRS = RadixSort.radixSort(listado);
+        //Se imprime el arreglo ya ordenado con MergeSort
+        String prueba4 = "Arreglo ordenado con RadixSort:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba4 = prueba4 + listRS[c] + ", ";
+        }
+        System.out.println(prueba4 + "\n");
+        
+        
         
         
         
