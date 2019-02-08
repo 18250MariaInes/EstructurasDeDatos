@@ -19,7 +19,7 @@ public class RadixSort {
      * @param arr el arreglo que se debe ordenar
      * @return el arreglo ya arreglado
      */
-    public static int [] radixSort(int[] v){
+    public static Comparable [] radixSort(Comparable[] v){
         int max    = 1;     // cantidad de repeticiones
         int nbytes = 4;     // numero de bytes a desplazar
         int nColas = (int) Math.pow(2,nbytes) ;
@@ -31,12 +31,12 @@ public class RadixSort {
         for(int i=0; i<max; i++) {
             // parte 1: recorrer el vector  para guardar cada elemento
             // en la cola correspondiente
-            for(int numero: v) {
+            for(Comparable numero: v) {
                 // buscar el mayor número del vector
-                if(i==0) if(numero>max) max=numero;
+                if(i==0) if((Integer) numero>max) max=(int) numero;
                 // calcular en qué cola debe ir cada número
-                int numCola = (numero>>div) & 0xf;
-                cola[numCola].add(numero);
+                int numCola = ( (Integer) numero>>div) & 0xf;
+                cola[numCola].add((Integer) numero);
             }
             div = div+nbytes;
  
