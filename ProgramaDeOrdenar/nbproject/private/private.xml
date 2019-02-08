@@ -3,18 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/test/programadeordenar/QuickSortTest.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/RadixSort.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/GnomeSort.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/test/programadeordenar/RadixSortTest.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/test/programadeordenar/GnomeSortTest.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/QuickSort.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/BubbleSort.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/ProgramaDeOrdenar.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/MergeSort.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/Generador.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/test/programadeordenar/MergeSortTest.java</file>
-            <file>file:/C:/Users/maria/OneDrive/Documentos/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/test/programadeordenar/BubbleSortTest.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/BubbleSort.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/GnomeSort.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/QuickSort.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/RadixSort.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/ProgramaDeOrdenar.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/MergeSort.java</file>
+            <file>file:/C:/Users/GrupoLF/Documents/GitHub/EstructurasDeDatos/ProgramaDeOrdenar/src/programadeordenar/Generador.java</file>
         </group>
     </open-files>
 </project-private>
