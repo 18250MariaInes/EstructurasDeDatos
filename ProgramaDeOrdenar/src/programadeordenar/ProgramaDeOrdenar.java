@@ -97,7 +97,7 @@ public class ProgramaDeOrdenar {
         * Ordenamiento con GNOMESORT
         */
         //Se instancia el sort Gnome para ejecutarlo con el Listado de ints
-        GnomeSort gs = new GnomeSort();
+        /*GnomeSort gs = new GnomeSort();
         int[] listGS = GnomeSort.gnomeSort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba1 = "Arreglo ordenado con GnomeSort:\n";
@@ -110,7 +110,7 @@ public class ProgramaDeOrdenar {
         * Ordenamiento con MERGESORT
         */
         //Se instancia el sort Merge para ejecutarlo con el Listado de ints
-        MergeSort ms = new MergeSort();
+        /*MergeSort ms = new MergeSort();
         int[] listMS = ms.mergeSort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba2 = "Arreglo ordenado con MergeSort:\n";
@@ -136,7 +136,7 @@ public class ProgramaDeOrdenar {
         * Ordenamiento con RADIXSORT
         */
         //Se instancia el sort Radix para ejecutarlo con el Listado de ints
-        RadixSort rs = new RadixSort();
+        /*RadixSort rs = new RadixSort();
         int[] listRS = RadixSort.radixSort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba4 = "Arreglo ordenado con RadixSort:\n";
@@ -144,9 +144,16 @@ public class ProgramaDeOrdenar {
             prueba4 = prueba4 + listRS[c] + ", ";
         }
         System.out.println(prueba4 + "\n");
-        
-        
-        
+        */
+        /*BubbleSort bs = new BubbleSort();
+        int[] listbs = BubbleSort.bubblesort(listado);
+        //Se imprime el arreglo ya ordenado con GnomeSort
+        String prueba5 = "Arreglo ordenado con BubbleSort:\n";
+        for (int c = 0; c < listado.length; c++){
+            prueba5 = prueba5 + listbs[c] + ", ";
+        }
+        System.out.println(prueba5+ "\n");
+        */
         
         
        

@@ -20,7 +20,6 @@ public class QuickSortTest {
     private int[] numbers;
     private final static int SIZE = 7;
     private final static int MAX = 20;
-
     
     @Test
     public void testNull() {
@@ -67,6 +66,20 @@ public class QuickSortTest {
             System.out.print(numbers[i]);
         }
         System.out.println();
+    }
+
+    /**
+     * Test of sort method, of class QuickSort.
+     */
+    @Test
+    public void testSort() {
+        System.out.println("sort");
+        int[] values = null;
+        QuickSort instance = new QuickSort();
+        int[] expResult = null;
+        int[] result = instance.sort(values);
+        assertArrayEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
     }
     
 }

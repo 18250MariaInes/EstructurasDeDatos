@@ -16,7 +16,7 @@ public class MergeSort {
      * @param array el array a ordenar
      * @return el arrya ya ordenado
      */
-    public int[] mergeSort(int array[])
+    public static int[] mergeSort(int array[])
 // pre: array is full, all elements are valid integers (not null)
 // post: array is sorted in ascending order (lowest to highest)
     {

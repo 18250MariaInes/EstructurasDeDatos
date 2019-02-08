@@ -12,6 +12,11 @@ package programadeordenar;
 /**/
 
 public class GnomeSort {
+    /**
+     *metodo de gnomesort de: http://www.geekviewpoint.com/java/sorting/gnomesort
+     * @param theArray array a arreglar
+     * @return el array ya arreglado
+     */
     static int []  gnomeSort( int[] theArray ) { 
       for ( int index = 1; index < theArray.length; ) { 
          if ( theArray[index - 1] <= theArray[index] ) { 
