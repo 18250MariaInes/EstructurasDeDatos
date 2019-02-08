@@ -48,7 +48,7 @@ public class ProgramaDeOrdenar {
             }
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
-            for (int i = 0; i < 3000; i++){
+            for (int i = 0; i < 1000; i++){//cambiar cantidad////////////////////
                 int dato = datos[i];
                 bw.write(dato + ", ");
             }
@@ -59,10 +59,10 @@ public class ProgramaDeOrdenar {
         }
         //Se lee el documento txt
         ArrayList<String> lectura = new ArrayList<String>();
-        int[] listado = new int[3000];
+        int[] listado = new int[1000];/////cambiar cantidad/////////////////////
         try{
             Stream<String> lines = Files.lines(
-                    Paths.get("numeros.txt"),
+                    Paths.get("numero1000.txt"),
                     StandardCharsets.UTF_8
             );
             lines.forEach(a -> lectura.add(a));
@@ -97,7 +97,7 @@ public class ProgramaDeOrdenar {
         * Ordenamiento con GNOMESORT
         */
         //Se instancia el sort Gnome para ejecutarlo con el Listado de ints
-        /*GnomeSort gs = new GnomeSort();
+        GnomeSort gs = new GnomeSort();
         int[] listGS = GnomeSort.gnomeSort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba1 = "Arreglo ordenado con GnomeSort:\n";
@@ -105,6 +105,9 @@ public class ProgramaDeOrdenar {
             prueba1 = prueba1 + listGS[c] + ", ";
         }
         System.out.println(prueba1+ "\n");
+        
+        int[] listGS2 = GnomeSort.gnomeSort(listado);
+        
         
         /*
         * Ordenamiento con MERGESORT
@@ -123,7 +126,7 @@ public class ProgramaDeOrdenar {
         * Ordenamiento con QUICKSORT
         */
         //Se instancia el sort Quick para ejecutarlo con el Listado de ints
-        QuickSort qs = new QuickSort();
+        /*QuickSort qs = new QuickSort();
         int[] listQS = qs.sort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba3 = "Arreglo ordenado con QuickSort:\n";
@@ -144,7 +147,7 @@ public class ProgramaDeOrdenar {
             prueba4 = prueba4 + listRS[c] + ", ";
         }
         System.out.println(prueba4 + "\n");
-        */
+        
         /*BubbleSort bs = new BubbleSort();
         int[] listbs = BubbleSort.bubblesort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
