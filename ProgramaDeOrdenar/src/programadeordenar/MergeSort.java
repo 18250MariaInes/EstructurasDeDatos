@@ -16,7 +16,7 @@ public class MergeSort {
      * @param array el array a ordenar
      * @return el arrya ya ordenado
      */
-    public static int[] mergeSort(int array[])
+    public static Comparable[] mergeSort(Comparable array[])
 // pre: array is full, all elements are valid integers (not null)
 // post: array is sorted in ascending order (lowest to highest)
     {
@@ -31,8 +31,8 @@ public class MergeSort {
                     // equal the total length minus the length of sub-array 1
                     int elementsInA2 = array.length - elementsInA1;
                     // declare and initialize the two arrays once we've determined their sizes
-                    int arr1[] = new int[elementsInA1];
-                    int arr2[] = new int[elementsInA2];
+                    Comparable arr1[] = new Comparable[elementsInA1];
+                    Comparable arr2[] = new Comparable[elementsInA2];
                     // copy the first part of 'array' into 'arr1', causing arr1 to become full
                     for(int i = 0; i < elementsInA1; i++)
                             arr1[i] = array[i];
@@ -56,7 +56,7 @@ public class MergeSort {
                     while(arr1.length != j && arr2.length != k)
                     {
                             // if the current element of arr1 is less than current element of arr2
-                            if(arr1[j] < arr2[k])
+                            if(arr1[j].compareTo(arr2[k])<0)
                             {
                                     // copy the current element of arr1 into the final array
                                     array[i] = arr1[j];

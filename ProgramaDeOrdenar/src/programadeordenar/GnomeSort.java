@@ -17,12 +17,12 @@ public class GnomeSort {
      * @param theArray array a arreglar
      * @return el array ya arreglado
      */
-    static int []  gnomeSort( int[] theArray ) { 
+    static Comparable []  gnomeSort( Comparable[] theArray ) { 
       for ( int index = 1; index < theArray.length; ) { 
-         if ( theArray[index - 1] <= theArray[index] ) { 
+         if ( theArray[index - 1].compareTo(theArray[index]) <= 0 ) { 
             ++index; 
          } else { 
-            int tempVal = theArray[index]; 
+            Comparable tempVal = theArray[index]; 
             theArray[index] = theArray[index - 1]; 
             theArray[index - 1] = tempVal; 
             --index; 
