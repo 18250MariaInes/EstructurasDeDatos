@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * Maria Ines Vasquez y Camila Gonzales
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package programadeordenar;
+//package programadeordenar;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -20,8 +20,9 @@ import java.util.Scanner;
 import java.util.stream.Stream;
 
 /**
- *
- * @author Camila
+ *Clase que ejecuta main
+ * @author camila 
+ * 
  */
 public class ProgramaDeOrdenar {
 
@@ -30,7 +31,7 @@ public class ProgramaDeOrdenar {
      */
     public static void main(String[] args) {
         String ruta = "";
-        int n=2500;
+        int n=2500;//cambiar de acuerdo a la cantidad de datos necesarios
         //Se intancia un objeto para generar el arreglo
         Generador g = new Generador();
         g.generar();
@@ -63,7 +64,7 @@ public class ProgramaDeOrdenar {
         Integer[] listado = new Integer[n];/////cambiar cantidad/////////////////////
         try{
             Stream<String> lines = Files.lines(
-                    Paths.get("numeros2500.txt"),////////////////CAMBIAR
+                    Paths.get("numeros2500.txt"),////////////////CAMBIAR para leer diferentes .txt
                     StandardCharsets.UTF_8
             );
             lines.forEach(a -> lectura.add(a));
@@ -99,13 +100,13 @@ public class ProgramaDeOrdenar {
         */
         //Se instancia el sort Gnome para ejecutarlo con el Listado de ints
         GnomeSort gs = new GnomeSort();
-        /*Integer[] listGS = (Integer[]) GnomeSort.gnomeSort(listado);
+        Integer[] listGS = (Integer[]) GnomeSort.gnomeSort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba1 = "Arreglo ordenado con GnomeSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba1 = prueba1 + listGS[c] + ", ";
         }
-        System.out.println(prueba1+ "\n");*/
+        System.out.println(prueba1+ "\n");
         
         
         
@@ -115,13 +116,13 @@ public class ProgramaDeOrdenar {
         */
         //Se instancia el sort Merge para ejecutarlo con el Listado de ints
         MergeSort ms = new MergeSort();
-       /*Integer[] listMS = (Integer[]) MergeSort.mergeSort(listado);
+        Integer[] listMS = (Integer[]) MergeSort.mergeSort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba2 = "Arreglo ordenado con MergeSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba2 = prueba2 + listMS[c] + ", ";
         }
-        System.out.println(prueba2 + "\n");*/
+        System.out.println(prueba2 + "\n");
         
         
         /*
@@ -129,13 +130,13 @@ public class ProgramaDeOrdenar {
         */
         //Se instancia el sort Quick para ejecutarlo con el Listado de ints
         QuickSort qs = new QuickSort();
-        /*Integer[] listQS = (Integer[]) qs.sort(listado);
+        Integer[] listQS = (Integer[]) qs.sort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba3 = "Arreglo ordenado con QuickSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba3 = prueba3 + listQS[c] + ", ";
         }
-        System.out.println(prueba3 + "\n");/*
+        System.out.println(prueba3 + "\n");
         
         
         /*
@@ -153,22 +154,15 @@ public class ProgramaDeOrdenar {
         
         
         BubbleSort bs = new BubbleSort();
-        /*Integer[] listbs = (Integer[]) BubbleSort.bubblesort(listado);
+        Integer[] listbs = (Integer[]) BubbleSort.bubblesort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba5 = "Arreglo ordenado con BubbleSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba5 = prueba5 + listbs[c] + ", ";
         }
-        System.out.println(prueba5+ "\n");*/
+        System.out.println(prueba5+ "\n");
 
-       
-        Integer[] listGS2 = (Integer[]) GnomeSort.gnomeSort(listRS);
-        /*Integer[] listGS8 = (Integer[]) MergeSort.mergeSort(listGS);
-        Integer[] listGS5 = (Integer[]) qs.sort(listGS);
-        Integer[] listGS3 = (Integer[]) RadixSort.radixSort(listGS);
-        Integer[] listGS4 = (Integer[]) BubbleSort.bubblesort(listGS);*/
         
-       
     }
     
 }

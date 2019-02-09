@@ -1,17 +1,17 @@
-package programadeordenar;
+//package programadeordenar;
 
 import java.util.Arrays;
 import java.util.List;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * Maria Ines Vasquez y Camila Gonzales
  * and open the template in the editor.
  */
 
 /**
  *
- * @author maria
+ * @author maria 
+ * 
  */
 public class BubbleSort {
 

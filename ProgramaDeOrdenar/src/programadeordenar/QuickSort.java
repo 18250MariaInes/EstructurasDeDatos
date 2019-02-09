@@ -1,8 +1,10 @@
-package programadeordenar;
+//package programadeordenar;
 
 /**
  *metodos de quick sort extraídos de https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Quick_sort
- * @author maria
+ * Maria Ines Vasquez y Camila Gonzales
+ * @author maria 
+ * 
  */
 public class QuickSort  {
     private Comparable[] numbers;

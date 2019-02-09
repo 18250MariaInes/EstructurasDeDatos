@@ -1,22 +1,23 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * Maria Ines Vasquez y Camila Gonzales
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package programadeordenar;
+//package programadeordenar;
 import java.lang.*;
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
 /**
  *
- * @author maria
+ * @author maria 
+ * 
  */
 public class RadixSort {
 
     /**
      *Método de Radix extraído de : https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Radix_sort
-     * @param arr el arreglo que se debe ordenar
+     * @param v el arreglo que se debe ordenar
      * @return el arreglo ya arreglado
      */
     public static Comparable [] radixSort(Comparable[] v){

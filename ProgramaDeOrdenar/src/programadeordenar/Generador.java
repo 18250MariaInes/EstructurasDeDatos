@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * Maria Ines Vasquez y Camila Gonzales
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package programadeordenar;
+//package programadeordenar;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,7 +15,8 @@ import java.util.logging.Logger;
 
 /**
  * Clase que genera numeros random y los guarda en un archivo .txt
- * @author Camila
+ * @author camila 
+ * 
  */
 public class Generador {
     int[] numeros = new int[2500];
