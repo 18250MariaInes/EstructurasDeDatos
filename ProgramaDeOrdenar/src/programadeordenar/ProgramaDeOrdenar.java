@@ -30,6 +30,7 @@ public class ProgramaDeOrdenar {
      */
     public static void main(String[] args) {
         String ruta = "";
+        int n=2500;
         //Se intancia un objeto para generar el arreglo
         Generador g = new Generador();
         g.generar();
@@ -48,7 +49,7 @@ public class ProgramaDeOrdenar {
             }
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
-            for (int i = 0; i < 1000; i++){//cambiar cantidad////////////////////
+            for (int i = 0; i < n; i++){//cambiar cantidad////////////////////
                 int dato = datos[i];
                 bw.write(dato + ", ");
             }
@@ -59,10 +60,10 @@ public class ProgramaDeOrdenar {
         }
         //Se lee el documento txt
         ArrayList<String> lectura = new ArrayList<String>();
-        Integer[] listado = new Integer[1000];/////cambiar cantidad/////////////////////
+        Integer[] listado = new Integer[n];/////cambiar cantidad/////////////////////
         try{
             Stream<String> lines = Files.lines(
-                    Paths.get("numero1000.txt"),
+                    Paths.get("numeros2500.txt"),////////////////CAMBIAR
                     StandardCharsets.UTF_8
             );
             lines.forEach(a -> lectura.add(a));
@@ -98,15 +99,15 @@ public class ProgramaDeOrdenar {
         */
         //Se instancia el sort Gnome para ejecutarlo con el Listado de ints
         GnomeSort gs = new GnomeSort();
-        Integer[] listGS = (Integer[]) GnomeSort.gnomeSort(listado);
+        /*Integer[] listGS = (Integer[]) GnomeSort.gnomeSort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba1 = "Arreglo ordenado con GnomeSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba1 = prueba1 + listGS[c] + ", ";
         }
-        System.out.println(prueba1+ "\n");
+        System.out.println(prueba1+ "\n");*/
         
-        Integer[] listGS2 = (Integer[]) GnomeSort.gnomeSort(listado);
+        
         
         
         /*
@@ -114,26 +115,28 @@ public class ProgramaDeOrdenar {
         */
         //Se instancia el sort Merge para ejecutarlo con el Listado de ints
         MergeSort ms = new MergeSort();
-        Integer[] listMS = (Integer[]) MergeSort.mergeSort(listado);
+       /*Integer[] listMS = (Integer[]) MergeSort.mergeSort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba2 = "Arreglo ordenado con MergeSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba2 = prueba2 + listMS[c] + ", ";
         }
-        System.out.println(prueba2 + "\n");
+        System.out.println(prueba2 + "\n");*/
+        
         
         /*
         * Ordenamiento con QUICKSORT
         */
         //Se instancia el sort Quick para ejecutarlo con el Listado de ints
         QuickSort qs = new QuickSort();
-        Integer[] listQS = (Integer[]) qs.sort(listado);
+        /*Integer[] listQS = (Integer[]) qs.sort(listado);
         //Se imprime el arreglo ya ordenado con MergeSort
         String prueba3 = "Arreglo ordenado con QuickSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba3 = prueba3 + listQS[c] + ", ";
         }
-        System.out.println(prueba3 + "\n");
+        System.out.println(prueba3 + "\n");/*
+        
         
         /*
         * Ordenamiento con RADIXSORT
@@ -148,19 +151,24 @@ public class ProgramaDeOrdenar {
         }
         System.out.println(prueba4 + "\n");
         
+        
         BubbleSort bs = new BubbleSort();
-        Integer[] listbs = (Integer[]) BubbleSort.bubblesort(listado);
+        /*Integer[] listbs = (Integer[]) BubbleSort.bubblesort(listado);
         //Se imprime el arreglo ya ordenado con GnomeSort
         String prueba5 = "Arreglo ordenado con BubbleSort:\n";
         for (int c = 0; c < listado.length; c++){
             prueba5 = prueba5 + listbs[c] + ", ";
         }
-        System.out.println(prueba5+ "\n");
-        
-        
+        System.out.println(prueba5+ "\n");*/
+
+       
+        Integer[] listGS2 = (Integer[]) GnomeSort.gnomeSort(listRS);
+        /*Integer[] listGS8 = (Integer[]) MergeSort.mergeSort(listGS);
+        Integer[] listGS5 = (Integer[]) qs.sort(listGS);
+        Integer[] listGS3 = (Integer[]) RadixSort.radixSort(listGS);
+        Integer[] listGS4 = (Integer[]) BubbleSort.bubblesort(listGS);*/
         
        
-      
     }
     
 }

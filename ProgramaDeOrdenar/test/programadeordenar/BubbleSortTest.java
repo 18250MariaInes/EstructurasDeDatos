@@ -20,11 +20,11 @@ public class BubbleSortTest {
     @Test
     public void testBubblesort() {
         System.out.println("bubblesort");
-        int[] input = {8, 5, 3, 1, 9, 6, 0, 7, 4, 2, 5};
+        Comparable[] input = {8, 5, 3, 1, 9, 6, 0, 7, 4, 2, 5};
         BubbleSort instance = new BubbleSort();
         instance.bubblesort(input);
         for (int i = 1; i < input.length; i++) {
-          if (input[i - 1] > input[i]) {
+          if (input[i - 1].compareTo(input[i])>0) {
             fail("bubblesort method fails.");
           }
         }

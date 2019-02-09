@@ -21,35 +21,18 @@ public class QuickSortTest {
     private final static int SIZE = 7;
     private final static int MAX = 20;
     
+    
     @Test
-    public void testNull() {
-        QuickSort sorter = new QuickSort();
-        sorter.sort(null);
-    }
-
-    @Test
-    public void testEmpty() {
-         QuickSort sorter = new QuickSort();
-        sorter.sort(new int[0]);
-    }
-
-    @Test
-    public void testSimpleElement() {
-         QuickSort sorter = new QuickSort();
-        int[] test = new int[1];
-        test[0] = 5;
-        sorter.sort(test);
-    }
-
-    @Test
-    public void testSpecial() {
-         QuickSort sorter = new QuickSort();
-        int[] test = { 5, 5, 6, 6, 4, 4, 5, 5, 4, 4, 6, 6, 5, 5 };
-        sorter.sort(test);
-        if (!validate(test)) {
-            fail("Should not happen");
+    public void testQuickSort() {
+        System.out.println("Gnomesort");
+        Comparable[] input = {18, 5, 100, 3, 1, 19, 6, 0, 7, 4, 2};
+        QuickSort instance = new QuickSort();
+        instance.sort(input);
+        for (int i = 1; i < input.length; i++) {
+          if (input[i - 1].compareTo(input[i])>0) {
+            fail("radixsort method fails.");
+          }
         }
-        printResult(test);
     }
     
     private boolean validate(int[] numbers) {
@@ -71,15 +54,6 @@ public class QuickSortTest {
     /**
      * Test of sort method, of class QuickSort.
      */
-    @Test
-    public void testSort() {
-        System.out.println("sort");
-        int[] values = null;
-        QuickSort instance = new QuickSort();
-        int[] expResult = null;
-        int[] result = instance.sort(values);
-        assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-    }
+    
     
 }

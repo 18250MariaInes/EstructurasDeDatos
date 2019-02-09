@@ -18,11 +18,11 @@ import java.util.logging.Logger;
  * @author Camila
  */
 public class Generador {
-    int[] numeros = new int[1000];
+    int[] numeros = new int[2500];
     
     public void generar(){
         Random random = new Random();
-        for(int i=0; i < 1000; i++){
+        for(int i=0; i < 2500; i++){
             int numRand = random.nextInt();
             this.numeros[i] = numRand;
         }

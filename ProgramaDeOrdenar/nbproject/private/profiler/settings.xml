@@ -2,8 +2,8 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment/>
-<entry key="org.netbeans.modules.profiler.v2.features.MethodsFeature_SelectedMethodsMode_SELECTION_FLAG">programadeordenar.GnomeSort,gnomeSort,([I)[I </entry>
+<entry key="org.netbeans.modules.profiler.v2.features.MethodsFeature_SelectedMethodsMode_SELECTION_FLAG">programadeordenar.GnomeSort,gnomeSort,([Ljava/lang/Comparable;)[Ljava/lang/Comparable; programadeordenar.RadixSort,radixSort,([Ljava/lang/Comparable;)[Ljava/lang/Comparable; programadeordenar.QuickSort,sort,([Ljava/lang/Comparable;)[Ljava/lang/Comparable; programadeordenar.MergeSort,mergeSort,([Ljava/lang/Comparable;)[Ljava/lang/Comparable; programadeordenar.BubbleSort,bubblesort,([Ljava/lang/Comparable;)[Ljava/lang/Comparable; </entry>
 <entry key="ACTIVATED_FEATURES">#org.netbeans.modules.profiler.v2.features.MethodsFeature@</entry>
-<entry key="org.netbeans.modules.profiler.v2.features.MethodsFeature_MODE_FLAG">SelectedMethodsMode</entry>
 <entry key="org.netbeans.modules.profiler.v2.features.MethodsFeature_SETTINGS_FLAG">true</entry>
+<entry key="org.netbeans.modules.profiler.v2.features.MethodsFeature_MODE_FLAG">SelectedMethodsMode</entry>
 </properties>
